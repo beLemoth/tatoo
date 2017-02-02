@@ -1,0 +1,32 @@
+// artists section
+
+section.artists
+
+	.container
+		.row
+			.col-md-6
+				.artist-desc
+					h3.artist-desc__h3 Artists<br><span class='artist-desc__name'> Stevie Ipsum</span>
+					p.artist-desc__text.
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Interdum proin ligula tempor eras sodales parturient; laoreet curae ridiculus consequat lectus mollis lacinia montes. Aenean commodo nostra elit imperdiet convallis pulvinar: parturient taciti dui posuere consectun. Class dignissim sed conubia ornare curae magna ipsum cum nullam ultrices curabitur eras.<br> Litora quis Velit tincidunt metus elit purus - lacus fermentum ipsum taciti.
+
+					ul.artist-desc__social
+						-
+						each href, item in socials
+							li.artist-desc__social_item
+								a.artist-desc__social_item-link.fa(class="fa-"+item, href=""+href)
+
+			.col-md-6
+				.artist-image
+					img.artist-image__item(src='http://placehold.it/555x520')
+
+			.col-md-12
+				.artist-slider
+					.artist-slider__list
+						-
+						each spec, name in artists
+							.artist-slider__list_item
+								img.artist-slider__list_item-image(src="http://placehold.it/228x230" alt=""+name+" min")
+								span.artist-slider__list_item-name= name
+								span.artist-slider__list_item-spec= spec
+

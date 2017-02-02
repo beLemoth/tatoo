@@ -1,0 +1,8 @@
+// navigation
+
+nav.nav
+	ul.nav__list
+		-
+		each href, item in navigation
+			li.nav__list_item
+				a.nav__list_item-link(href="" + href)= item 

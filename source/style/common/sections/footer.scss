@@ -1,0 +1,55 @@
+/* footer ------------------------------------------- */
+
+.footer {
+	position: absolute; bottom: 0; left: 0; right: 0;
+	height: $footer-height;
+	overflow: hidden;
+	padding-top: rem(50);
+
+	.footer-wrapper {
+		padding-top: rem(100);
+		transform: skewY(-$skew-deg);
+		height: $footer-height;
+	}
+
+	.rotate-back {
+		transform: skewY($skew-deg);
+	}
+
+	&__logo {
+		&_link {
+			@include font-type($white-text, $logo-font, rem(72), 0.67, 0);
+		}
+	}
+
+	&__copyright {
+		&_text {
+			@include font-type($grey-text, $thin-font, rem(15), 2.93, 0); 
+		}
+		&_design {
+			@extend .footer__copyright_text;
+			margin-right: rem(15);
+			a {
+				@extend .footer__copyright_text; 
+			}
+		}
+		&_devel {
+			@extend .footer__copyright_text;
+			a {
+				@extend .footer__copyright_text; 
+			}
+		}
+	}
+
+	&-social-wrap {
+		@extend .header-social-wrap;
+	}
+
+	&-social {
+		@extend .header-social;
+
+		&__item {
+			@extend .header-social__item;
+		}
+	}
+}

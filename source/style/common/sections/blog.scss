@@ -1,0 +1,87 @@
+/* blog -------------------------------------------- */
+
+.blog {
+	padding: rem(150) 0;
+	transform: skewY(5deg);
+
+	.rotate-back {
+		transform: skewY(-5deg);
+	}
+
+	&__h2 {
+		@extend .glob__h2;
+		color: $white-text; text-align: center;
+		margin-bottom: rem(30);
+	}
+
+	&__item {
+		position: relative;
+		overflow: hidden;
+
+		&_footer {
+			@include font-type($blog-text, $regular-font, rem(15), rem(50), 0);
+			text-transform: uppercase;
+			position: absolute; background-color: $blog-item-bg;
+			bottom: 0; left: 0; right: 0;
+			padding: 0 rem(15);
+		}
+
+		&_desc {
+			position: absolute; top: 100%; right: 0; left: 0;
+			height: 100%;
+			background-color: $blog-item-bg;
+			padding: rem(20) rem(15);
+
+			transition: top ease-in .4s;
+
+			&-h4 {	
+				@include font-type($blog-text, $regular-font, rem(15), 1.2, 0);
+				text-transform: uppercase;	
+				margin-bottom: rem(15);
+			}
+
+			&-text {
+				@include font-type($blog-text, $thin-font, rem(15), 1.5, 0);
+				margin-bottom: rem(15);
+			}
+
+			&-button {
+				display: inline-block;
+				width: rem(105); height: rem(35);
+				@include font-type($white-text, $thin-font, rem(14), rem(35), 0);
+				text-align: center; text-transform: uppercase;
+				background-color: $header-bg;
+				margin-bottom: rem(10);
+			}
+
+			&-footer {
+				&__list {
+					padding-left: 0;
+					&_item {
+						display: inline-block;
+						@include font-type(#b1b1b1, $regular-font, rem(14), 1, 0);
+						text-transform: uppercase;
+						padding: 0 rem(10);
+						border-right: 1px solid #b1b1b1;
+							
+						&:first-child { 
+							padding-left: 0;
+						}
+
+						&:last-child {
+							border-right: 0;
+							padding-right: 0;
+						}
+					}
+				}
+			}
+		}
+	
+		&:hover {
+			.blog__item_desc {
+				top: 0;
+			}
+		}
+
+	}
+}

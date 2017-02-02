@@ -1,0 +1,56 @@
+/* contact ----------------------------------- */
+
+.contact {
+
+	&-desc {
+
+		padding-top: rem(100);
+		&__h2 {
+			@extend .glob__h2;
+			color: $dark-text;
+		}
+
+		&__text {
+			@extend .glob__text;
+		}
+
+		&__addr {
+			@extend .glob__text; padding-left: rem(20);
+			position: relative;
+			&:before {
+				position: absolute; left: 0; bottom: 0;
+				font-family: $fa-font;
+			}
+			a {
+				color: #515151;
+			}
+		}
+
+		&__opentime {
+			@extend .contact-desc__addr;
+		}
+
+		&__tel {
+			@extend .glob__text;
+			font-size: rem(24); line-height: 2;
+		}
+
+		&__email {
+			@extend .contact-desc__tel;
+			color: $dark-text;
+		}
+	}
+
+	&-image {
+		overflow: hidden;
+		transform: skewY(-$skew-deg);
+		max-height: rem(600);
+
+		&__item{
+			transform: skewY($skew-deg);
+			width: 100%; height: rem(650);
+			background: url('http://placehold.it/570x650') center bottom no-repeat;
+		}
+	}
+
+}

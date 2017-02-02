@@ -1,0 +1,24 @@
+/* gallery --------------------------------------------- */
+
+.gallery {
+	padding: rem(150) 0;
+
+	&__h2 {
+		@extend .glob__h2;
+		color: $dark-text;
+		margin-bottom: rem(30);
+	}
+
+	&__text {
+		@extend .glob__text;
+		margin-bottom: rem(60);
+	}
+
+	&__list {
+		margin: 0 rem(-15);
+		&_item {
+			overflow: hidden;
+			margin-bottom: rem(50);
+		}
+	}
+}

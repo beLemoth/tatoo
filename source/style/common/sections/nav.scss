@@ -1,0 +1,19 @@
+/* header navigation */
+
+.nav {
+	text-align: center;
+	&__list {
+		display: inline-block;
+		&_item {
+			display: inline-block;
+			margin-right: rem(50);
+			&:last-child {
+				margin-right: 0;
+			}
+			&-link {
+				@include font-type($white-text, $regular-font, rem(19), rem(48), 0);
+				text-transform: uppercase;
+			}
+		}
+	}
+}

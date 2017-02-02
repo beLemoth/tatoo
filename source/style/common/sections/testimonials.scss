@@ -1,0 +1,47 @@
+/* testimonials --------------------------------------- */
+
+.testimonials {
+
+	padding: rem(150) 0;
+	transform: skewY(-5deg);
+
+	position: relative;
+
+	.rotate-back {
+		transform: skewY(5deg);
+	}
+
+	
+	&__h2 {
+		@extend .glob__h2;
+		font-family: $thin-font;
+		text-align: center;
+		&:first-line {
+			font-family: $semibold-font;
+		}
+	}
+
+	&-block {
+		text-align: center;
+		border-left: 0;
+		
+		&__text {
+			@include font-type($grey-text, $logo-font, rem(48), 1.25, 0);
+		}
+
+		&__cite {
+			@include font-type($grey-text, $thin-font, rem(15), 3, 0);
+			font-style: normal;
+		}
+	}
+
+	&__button {
+		display: block; position: absolute; bottom: rem(-140); right: rem(15);
+		text-align: center;
+		width: rem(290); height: rem(60); background-color: $grey-bg;
+		border: 1px solid $white-bg;
+		@include font-type($white-text, $thin-font, rem(21), rem(60), 0);
+		text-transform: uppercase;
+	}
+
+}

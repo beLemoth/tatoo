@@ -1,0 +1,52 @@
+/* artists section -------------------------------------- */
+
+.artists {
+	z-index: 0;
+}
+
+	.artist-desc {
+		padding-top: rem(100);
+
+		&__h3 {
+			@extend .glob__h2;
+			color: $dark-text;
+		}
+
+		&__text {
+			@extend .glob__text;
+		}
+
+		&__social {
+			padding-left: 0;
+			&_item {
+				display: inline-block;
+				padding-right: rem(25);
+				&:last-child {
+					padding-right: 0;
+				}
+				&-link {
+					color: $grey-text;
+					font-size: rem(21);
+				}
+			}
+		}
+	}
+
+	.artist-slider {
+		&__list {
+			&_item {
+				float: left;
+				position: relative;
+
+				&-name {
+					position: absolute; top: rem(50); left: 0; right: 0;
+					font-family: $logo-font; font-size: rem(26); color: #dfdfdf; line-height: 1.54;
+					text-align: center;
+				}
+				&-spec {
+					@extend .artist-slider__list_item-name;
+					top: rem(90);
+				}
+			}
+		}
+	}
