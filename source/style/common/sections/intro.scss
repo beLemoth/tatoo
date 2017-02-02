@@ -1,0 +1,30 @@
+/* intro section -------------------------------------*/
+
+.intro {
+
+}
+
+.intro__desc {
+	&_h3 {
+		@include font-type($white-text, $semibold-font, rem(48), 1.125, 0);
+		text-transform: uppercase;
+	}
+	&_h4 {
+		@extend .intro__desc_h3;
+		font-family: $thin-font;
+	}
+	&_text {
+		@include font-type($grey-text, $thin-font, rem(15), 1.47, 0);
+		&-link {
+			
+		}
+	}
+	&_addr {
+		@extend .intro__desc_text;
+		display: inline-block;
+	}
+	&_opentime {
+		@extend .intro__desc_addr;
+	}
+
+}

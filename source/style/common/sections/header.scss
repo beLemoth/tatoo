@@ -1,0 +1,41 @@
+/* header ------------------------------------*/
+
+.header {
+	background-color: $header-bg;
+	padding-bottom: rem(130);
+	
+	&-top {
+		height: rem(250); line-height: rem(250);
+		@extend .clearfix;
+		vertical-align: middle;
+	}
+
+	.tel {
+		@include font-type($white-text, $regular-font, rem(24), 2, 0);
+	}
+	.logo {
+		text-align: center;
+		&-link {
+			display: inline-block; vertical-align: middle;
+			@include font-type($white-text, $logo-font, rem(115), rem(80), 0);
+		}
+	}
+	.social-wrap {
+		text-align: right; vertical-align: middle;
+	}
+	.social{
+		display: inline-block; width: rem(60); height: rem(60);
+		line-height: rem(77); text-align: center;
+		background-color: $white-bg; border-radius: 50%;
+		
+		&__item {
+			display: inline-block; width: rem(52); height: rem(52);
+			background-color: $white-bg; 
+			border: 2px solid $header-bg; border-radius: 50%;
+			line-height: rem(52); text-align: center;
+			font-size: rem(30);
+			color: $header-bg;
+		}
+	}
+}
+

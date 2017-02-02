@@ -1,0 +1,89 @@
+@import 'common/box-sizing';
+@import 'common/clearfix';
+@import 'common/mixins';
+@import 'common/functions';
+
+/* local fonts */
+@include font-face('latothin','latothin');
+@include font-face('latoregular','latoregular');
+@include font-face('latosemibold','latosemibold');
+@include font-face('greatvibes','greatvibes');
+
+/* variables */
+
+$logo-font: 'greatvibes', sans-serif;
+$thin-font: 'latothin', sans-serif;
+$regular-font: 'latoregular', sans-serif;
+$semibold-font: 'latosemibold', sans-serif;
+
+$dark-bg: url('../img/main-bg-2.jpg') left top repeat;
+$header-bg: #191919;
+$black-bg: rgba(25,25,25, .97); 
+$white-bg: #ffffff;
+
+$white-text: #ffffff;
+$dark-text: #191919;
+$grey-text: #888888;
+
+
+/* global styles */
+body {
+  margin: 0; min-height: 100%;
+}
+
+html {
+	min-height: 100%; font-size: 14px;
+	overflow: hidden;
+
+	@include respond-to(md) {
+		font-size: 13px;
+	}
+
+	@include respond-to(sm) {
+		font-size: 12px;
+	}
+
+	@include respond-to(xs) {
+		font-size: 11px;
+	}
+
+	@include respond-to(mob) {
+		font-size: 10px;
+	}
+}
+
+.np {
+	padding: 0;
+}
+
+.app {
+	
+}
+
+a{
+	text-decoration: none;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+// global settings
+.intro,
+.testimonials,
+.blog,
+.footer {
+	background: $dark-bg;
+}
+
+.dark-wrapper {
+	background: $black-bg;
+	background-opacity: .9;
+}
+
+// import sections
+
+@import 'common/sections/header';
+@import 'common/sections/nav';
+@import 'common/sections/intro';
+
+
