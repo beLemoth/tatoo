@@ -19,6 +19,10 @@
 		overflow: hidden;
 		width: 100%; height: rem(250);
 
+		&_image {
+			width: 100%; height: auto;
+		}
+
 		&_footer {
 			@include font-type($blog-text, $regular-font, rem(15), rem(50), 0);
 			text-transform: uppercase;

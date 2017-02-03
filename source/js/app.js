@@ -4,9 +4,11 @@ $(document).ready(function() {
 	$('#carousel').carousel();
 
 	$('.owl-carousel').owlCarousel({
-	    loop:true,
-	    margin:0,
-	    nav:true,
+	    loop: true,
+	    nav: true,
+	    navContainerClass: 'owl-navigation',
+	    dots: false,
+	    navText: [],
 	    responsive:{
 	        0:{
 	            items:1
