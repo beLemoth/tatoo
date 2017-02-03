@@ -2,10 +2,10 @@
 
 .blog {
 	padding: rem(150) 0;
-	transform: skewY(5deg);
+	transform: skewY($skew-deg);
 
 	.rotate-back {
-		transform: skewY(-5deg);
+		transform: skewY(-$skew-deg);
 	}
 
 	&__h2 {
@@ -17,6 +17,7 @@
 	&__item {
 		position: relative;
 		overflow: hidden;
+		width: 100%; height: rem(250);
 
 		&_footer {
 			@include font-type($blog-text, $regular-font, rem(15), rem(50), 0);
@@ -24,6 +25,9 @@
 			position: absolute; background-color: $blog-item-bg;
 			bottom: 0; left: 0; right: 0;
 			padding: 0 rem(15);
+			opacity: 1;
+
+			transition: opacity ease-in .2s;
 		}
 
 		&_desc {
@@ -32,7 +36,7 @@
 			background-color: $blog-item-bg;
 			padding: rem(20) rem(15);
 
-			transition: top ease-in .4s;
+			transition: top ease-out .3s;
 
 			&-h4 {	
 				@include font-type($blog-text, $regular-font, rem(15), 1.2, 0);
@@ -78,6 +82,9 @@
 		}
 	
 		&:hover {
+			.blog__item_footer {
+				opacity: 0;
+			}
 			.blog__item_desc {
 				top: 0;
 			}

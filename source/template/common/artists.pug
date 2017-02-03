@@ -18,15 +18,16 @@ section.artists
 
 			.col-md-6
 				.artist-image
-					img.artist-image__item(src='http://placehold.it/555x520')
+					img.artist-image__item(src='./assets/img/Mark Ipsum.jpg')
 
 			.col-md-12
 				.artist-slider
-					.artist-slider__list
+					.artist-slider__list.owl-carousel
 						-
 						each spec, name in artists
-							.artist-slider__list_item
-								img.artist-slider__list_item-image(src="http://placehold.it/228x230" alt=""+name+" min")
-								span.artist-slider__list_item-name= name
-								span.artist-slider__list_item-spec= spec
+							.artist-slider__list_item.item
+								img.artist-slider__list_item-image(src="./assets/img/"+name+".min.jpg" alt=""+name+" min")
+								.item-desc
+									span.artist-slider__list_item-name= name
+									span.artist-slider__list_item-spec= spec
 

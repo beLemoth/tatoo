@@ -17,8 +17,34 @@
 	&__list {
 		margin: 0 rem(-15);
 		&_item {
+			width: 100%; height: rem(338);
 			overflow: hidden;
 			margin-bottom: rem(50);
+			background-color: $header-bg;
+			position: relative;
+			cursor: pointer;
+
+			&-image {
+				opacity: 1;
+				width: 100%; height: auto;
+				transition: opacity ease-out .2s;
+			}
+
+			&-zoom {
+				position: absolute; left: 50%; top: rem(120); margin-left: rem(-18); 
+				font-size: rem(36); color: #dfdfdf;
+				display: none;
+			}
+
+			&:hover {
+				.gallery__list_item-zoom {
+					display: block;
+				}
+				.gallery__list_item-image {
+					opacity: .3;
+				}
+
+			}
 		}
 	}
 }

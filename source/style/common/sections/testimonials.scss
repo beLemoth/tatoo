@@ -3,12 +3,12 @@
 .testimonials {
 
 	padding: rem(150) 0;
-	transform: skewY(-5deg);
+	transform: skewY(-$skew-deg);
 
 	position: relative;
 
 	.rotate-back {
-		transform: skewY(5deg);
+		transform: skewY($skew-deg);
 	}
 
 	

@@ -1,7 +1,7 @@
 /* artists section -------------------------------------- */
 
 .artists {
-	z-index: 0;
+	margin-bottom: rem(-30);
 }
 
 	.artist-desc {
@@ -31,12 +31,31 @@
 			}
 		}
 	}
+	.artist-image {
+		width: 100%; max-height: rem(555); overflow: hidden;
+
+	}
 
 	.artist-slider {
 		&__list {
 			&_item {
-				float: left;
-				position: relative;
+
+				background-color: $header-bg;
+				cursor: pointer;
+				max-height: rem(230);
+				overflow: hidden;
+
+				transition: all ease-out .2s;
+
+				&-image {
+					opacity: 1;
+					transition: opacity ease-out .2s;
+				}
+
+				.item-desc {
+					display: none;
+					transition: display ease-in .4s;
+				}
 
 				&-name {
 					position: absolute; top: rem(50); left: 0; right: 0;
@@ -46,6 +65,18 @@
 				&-spec {
 					@extend .artist-slider__list_item-name;
 					top: rem(90);
+				}
+
+				&:hover {
+					
+					box-shadow: 0px -10px 20px 9px rgba(25, 25, 25, 1);
+
+					.artist-slider__list_item-image {
+						opacity: .3;
+					}
+					.item-desc {
+						display: block;
+					}
 				}
 			}
 		}

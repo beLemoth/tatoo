@@ -48,8 +48,9 @@
 
 		&__item{
 			transform: skewY($skew-deg);
-			width: 100%; height: rem(650);
-			background: url('http://placehold.it/570x650') center bottom no-repeat;
+			width: 100%; height: rem(600);
+			background: url('../img/contacts.jpg') center center no-repeat;
+			background-size: cover;
 		}
 	}
 

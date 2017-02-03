@@ -1,13 +1,13 @@
 /* intro section -------------------------------------*/
 
 .intro {
-	transform: skewY(5deg);
+	transform: skewY($skew-deg);
 	padding: rem(160) 0;
 	overflow: hidden;
-	z-index: 100;
+	z-index: 1000;
 
 	.rotate-back {
-		transform: skewY(-5deg);
+		transform: skewY(-$skew-deg);
 	}
 }
 
@@ -25,7 +25,7 @@
 	}
 	&_image {
 		float: left;
-		margin-right: rem(15);
+		margin-right: rem(10);
 	}
 	&_addr {
 		@extend .intro__desc_text;

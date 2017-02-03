@@ -1,3 +1,26 @@
 // carousel section
 
-section.carousel
+section.header-carousel
+
+	#carousel.carousel.slide.rotate-back
+		
+		ol.carousel-indicators
+			- for (var i=0; i<4; i++)
+				case i
+					when 0
+						li.active(data-target='#carousel', data-slide-to=''+i)
+					default
+						li(data-target='#carousel', data-slide-to=''+i)
+
+		.carousel-inner
+			- for (var i=0; i<4; i++)
+				case i
+					when 0
+						.item.active
+							img(src="./assets/img/carousel-slider-"+(i+1)+".jpg", alt="slider-"+(i+1))
+					default 
+						.item
+							img(src="./assets/img/carousel-slider-"+(i+1)+".jpg", alt="slider-"+(i+1))
+						
+
+		
