@@ -2,10 +2,15 @@
 
 .blog {
 	padding: rem(150) 0;
-	transform: skewY($skew-deg);
+	position: relative;
+	z-index: 1000;
 
-	.rotate-back {
-		transform: skewY(-$skew-deg);
+	&:before {
+		content: '';
+		z-index: -1;
+		position: absolute; left: 0; right: 0; bottom: 0; top: 0;
+		background-color: $header-bg;
+		transform: skewY($skew-deg);
 	}
 
 	&__h2 {

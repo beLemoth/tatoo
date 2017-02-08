@@ -3,14 +3,16 @@
 .testimonials {
 
 	padding: rem(150) 0;
-	transform: skewY(-$skew-deg);
-
 	position: relative;
+	z-index: 1000;
 
-	.rotate-back {
-		transform: skewY($skew-deg);
+	&:before {
+		content: '';
+		z-index: -1;
+		position: absolute; left: 0; right: 0; bottom: 0; top: 0;
+		background-color: $header-bg;
+		transform: skewY(-$skew-deg);
 	}
-
 	
 	&__h2 {
 		@extend .glob__h2;
@@ -36,7 +38,7 @@
 	}
 
 	&__button {
-		display: block; position: absolute; bottom: rem(-140); right: rem(15);
+		display: block; position: absolute; bottom: rem(0); right: rem(15);
 		text-align: center;
 		width: rem(290); height: rem(60); background-color: $grey-bg;
 		border: 1px solid $white-bg;

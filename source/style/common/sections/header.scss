@@ -6,13 +6,12 @@
 	margin-bottom: rem(720);
 	
 	&-top {
-		height: rem(250); line-height: rem(250);
+		max-height: rem(260); line-height: rem(260);
 		@extend .clearfix;
-		vertical-align: middle;
 	}
 
 	.tel {
-		@include font-type($white-text, $regular-font, rem(24), 2, 0);
+		@include font-type($white-text, $regular-font, rem(24), 2, rem(-0.2));
 	}
 	.logo {
 		text-align: center;
@@ -22,15 +21,18 @@
 		}
 	}
 	&-social-wrap {
-		text-align: right; vertical-align: middle;
+		text-align: right;
+		line-height: rem(260);
 	}
 	&-social{
 		display: inline-block; width: rem(60); height: rem(60);
-		line-height: rem(77); text-align: center;
+		position: relative;
 		background-color: $white-bg; border-radius: 50%;
 		
 		&__item {
-			display: inline-block; width: rem(52); height: rem(52);
+			position: absolute;
+			width: rem(52); height: rem(52);
+			right: rem(4); top: rem(4);
 			background-color: $white-bg; 
 			border: 2px solid $header-bg; border-radius: 50%;
 			line-height: rem(52); text-align: center;
