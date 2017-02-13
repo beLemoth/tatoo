@@ -3,9 +3,9 @@
 .header-carousel {
 	transform: skewY(-$skew-deg);
 	overflow: hidden;
-	min-height: rem(660);
-	position: absolute; top: rem(350); left: 0;
+	position: relative;
 	z-index: 1000;
+	margin: rem(-50) auto rem(20) auto;
 
 	.rotate-back {
 		transform: skewY($skew-deg);
@@ -14,7 +14,7 @@
 
 .carousel {
 	margin: rem(-50) 0;
-	
+
 	&-indicators {
 		z-index: 10000;
 		bottom: rem(80);
