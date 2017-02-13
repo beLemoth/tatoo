@@ -10,6 +10,7 @@
 		padding-top: rem(100);
 		transform: skewY(-$skew-deg);
 		height: $footer-height;
+		position: relative;
 	}
 
 	.rotate-back {
@@ -19,6 +20,7 @@
 	&__logo {
 		&_link {
 			@include font-type($white-text, $logo-font, rem(72), 0.67, 0);
+			cursor: pointer;
 		}
 	}
 
@@ -43,6 +45,7 @@
 
 	&-social-wrap {
 		@extend .header-social-wrap;
+		top: rem(15);
 	}
 
 	&-social {

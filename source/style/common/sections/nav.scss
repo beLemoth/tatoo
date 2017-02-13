@@ -7,12 +7,30 @@
 		&_item {
 			display: inline-block;
 			margin-right: rem(50);
+			position: relative;
 			&:last-child {
 				margin-right: 0;
 			}
 			&-link {
 				@include font-type($white-text, $regular-font, rem(19), rem(48), 0);
 				text-transform: uppercase;
+			}
+
+			&:before {
+				position: absolute; right: 50%; left: 50%; bottom: 0;
+				content: '';
+				opacity: 0;
+				border-bottom: 2px solid $white-text;
+				transition: all ease-in .4s;
+			}
+
+			&:hover {
+				.nav__list_item-link {
+					color: $white-text;
+				}
+				&:before {
+					left: 0; right: 0; opacity: 1;
+				}
 			}
 		}
 	}

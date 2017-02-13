@@ -1,7 +1,7 @@
 /* intro section -------------------------------------*/
 
 .intro {
-	padding: rem(160) 0;
+	padding: rem(130) 0;
 	position: relative;
 	z-index: 100;
 
@@ -22,7 +22,24 @@
 	&_text {
 		@extend .glob__text;
 		&-link {
-			
+			position: relative; color: $white-text;
+			&:after {
+				position: absolute; left: rem(-2); right: rem(-2); bottom: rem(-10);
+				padding: 0 rem(2);
+				opacity: 0;
+				border-radius: 2px;
+				background-color: $white-text; color: $dark-text;
+				content: 'inline link hover';
+				
+				transition: all ease-in .3s;
+			}
+
+			&:hover {
+				&:after {
+					opacity: 1;
+					bottom: rem(-2);
+				}
+			}
 		}
 	}
 	&_image {
